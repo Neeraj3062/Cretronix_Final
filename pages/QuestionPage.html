@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <!-- =======TITLE====== -->
+      <title>CRETRONIX | QUESTION PAGE</title>
+
+      <!-- =====CSS==== -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+      <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+      <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+      <!-- ===CUSTOM CSS== -->
+      <link rel="stylesheet" href="../css/QuestionPage.css " />
+
+</head>
+
+<body>
+  <!-- ==========HEADER========== -->
+  <header>
+    <nav class="navbar navbar-expand-lg px-1 navbar-dark " id="navbar">
+      <!-- ======CRETRONIX LOGO========== -->
+      <img src="../imgs/cretronix final.png" class="cretronix__logo" alt="" ">
+      <!-- ========TIMER========== -->
+      <div class="timer" ">
+        <div id="timer"></div>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!--  -->
+        </ul>
+        <form class="d-flex">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- =========INSTRUCTION MODAL========== -->
+            <li class="nav-item">
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog-scrollable modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title text-capitalize fw-bold fs-3   text-center me-3" id="exampleModalLabel" style="margin-left: 32%;">Instructions</h5>
+                      <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                    </div>
+                    <div class="modal-body">
+                      <h2>Heead</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, praesentium exercitationem! Dolores quasi maiores, nihil culpa neque sapiente repellat quod.</p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quidem reprehenderit soluta? Provident tenetur possimus nobis, illo sequi doloremque ab!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, praesentium exercitationem! Dolores quasi maiores, nihil culpa neque sapiente repellat quod.</p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, praesentium exercitationem! Dolores quasi maiores, nihil culpa neque sapiente repellat quod.</p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, praesentium exercitationem! Dolores quasi maiores, nihil culpa neque sapiente repellat quod.</p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, praesentium exercitationem! Dolores quasi maiores, nihil culpa neque sapiente repellat quod.</p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, praesentium exercitationem! Dolores quasi maiores, nihil culpa neque sapiente repellat quod.</p>
+                        <br>
+                    </div>
+                    <div class="modal-footer">
+                      <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                      <button type="button" class="btn btn-primary fw-bold" data-bs-dismiss="modal" aria-label="Close">I Undestood</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="nav-link active  " id="nav-link" style="margin-right: 20px;" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Instructions
+              </a>
+            </li>
+            <li class="nav-item" id="nav-link">
+              <a class="nav-link active " style="margin-right: 10px;" aria-current="page" href="./OurTeam.html">Our Team</a>
+            </li>
+            <!-- ===========SUBMIT BUTTON========= -->
+            <li class="nav-item">
+              <a class="nav-link active fw-bold " aria-current="page" id="nav-link"  href="#">
+                <!-- Button trigger modal -->
+                <button type="button" id="submit_btn" class="submit" data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop" >
+                  SUBMIT
+                </button>
+              </a>
+            </li>
+              <!-- ===========SUBMIT MODAL========= -->
+              <!-- Modal -->
+              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title fs-2 fw-bolder" id="staticBackdropLabel"> CRETRONIX'21</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body fs-5 fw-bold" id="modal_body">
+                      ARE YOU SURE YOU WANT TO SUBMIT ??
+                      <br>
+                      <br>
+                      <br>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn fw-bold btn-danger" data-bs-dismiss="modal">Close</button>
+                      <!-- =======SUBMIT TO RESULT======== -->
+                      <a href="./Result.html">
+                        <button type="button" class="btn fw-bold btn-success">
+                          Yes Sure
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- ==========PISB LOGO============ -->
+            <li class="nav-item">
+              <img src="../imgs/logo pisb_2.png" alt="" class="credenzlogo" style="margin-top: 5px; margin-right: 10px;">
+            </li>
+          </ul>
+        </form>
+      </div>
+      </>
+    </nav>
+  </header>
+
+  <main>
+    <div class="relative min-h-screen md:flex">
+      <!-- =====MOBILE MENU BAR========= -->
+      <div class="text-gray-100 flex justify-between md:hidden">
+        <!-- logo -->
+        <a href="#" class="block text-white font-bold text-center mx-3" style="margin-left: 30%;" >CRETRONIX ROUND 1</a>
+
+        <!-- ========MOBILE MENU BUTTON========= -->
+        <button class="mobile-menu-button p-4 focus:outline-none focus:bg-gray-700">
+          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- =========SIDEBAR============ -->
+      <div id="sideBar"      class="sidebar text-blue-100  space-y-6 py-2 mx-1  absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+        <div class="container container-md m-0 p-0">
+        </div>
+        <div class="container-fluid m-0 p-0 mt-0">
+          <div class="divider-box">
+            <h2 class="text-center fw-bolder p-2 fs-5">CRETRONIX ROUND -1</h2>
+          </div>
+          <div class="container mt-3 mb-2">
+            <div class="question-box">
+              <h2 class="text-center fw-bolder  fs-6">QUESTIONS</h2>
+            </div>
+          </div>
+          <!-- ====QUESTION NO CIRCLES === -->
+          <div class="container mx-0 py-0">
+            <div class="row mb-2 py-1">
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">1</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">2</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">3</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">4</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">5</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-2 py-1">
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">6</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">7</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">8</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">9</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">10</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-2 py-1">
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">11</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">12</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">13</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">14</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">15</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-2 py-1">
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">16</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">17</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">18</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">19</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">20</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-2 py-1">
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">21</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">22</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">23</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">24</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">25</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-2 py-1">
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">26</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">27</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">28</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">29</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center">
+                  <div class="box">
+                    <label class="box">
+                      <input type="radio" name="like" checked="" />
+                      <span class="yes">30</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===DIVIDER=== -->
+          <div class="divider-box m-0 p-0">
+            <h2 class="text-center fw-bolder p-2"></h2>
+          </div>
+          <!-- ===Q_BOX INFO=== -->
+          <div class="container">
+            <div class="row py-1">
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center" id="ans">
+                  <div class="box">
+                    <span class="yes Q_Numbers"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3 m-0 p-0">
+                <h2 class="instruct p-0 ">Answered</h2>
+              </div>
+              <div class="col-3 m-0 p-0">
+                <div class="Q_Circles my-auto text-center" id="view-not-ans">
+                  <div class="box">
+                    <span class="yes Q_Numbers"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3 m-0 p-0">
+                <h2 class="instruct">Viewed</h2>
+              </div>
+            </div>
+            <div class="row py-1">
+              <div class="col-3 m-0 p-0">
+                <div class="Q_Circles my-auto text-center" id="bookmark">
+                  <div class="box">
+                    <span class="yes Q_Numbers"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3 m-0 p-0">
+                <h2 class="instruct p-0 ">Bookmark</h2>
+              </div>
+              <div class="col m-0 p-0">
+                <div class="Q_Circles my-auto text-center" id="not-ans">
+                  <div class="box">
+                    <span class="yes Q_Numbers"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3 m-0 p-0">
+                <h2 class="instruct ">Not Viewed</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE CONTENT -->
+      <div class="flex-1 text-xl font-bold p-0 m-0 container-left">
+        <div class="row">
+          <div class="col">
+            <div class="question">
+              <div class="questionStatement">
+                <span class="Q__mark"> Q9.</span>
+                Lorem ipsum dolor sitgnissimos id adipisci, quo soluta, explicabo earum aliquid magni repellendus ullam,
+                eos quidem corrupti eum? Nostrum asperiores, soluta perferendis atque quasi doloribus?
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="questionMid">
+          <div class="leftOptio">
+            <div class="options">
+              <div onclick="changeBg1()" id="opt1">
+                <input type="radio" hidden name="option" id="option1">
+                <label   for="option1" style="margin-left: 3px; margin-right: 2px;">
+                  1.
+                </label>
+                 <label for="option1">
+                    Lorem ipsum   dolor sit amet consectetur adipisicing elit.
+                  </label>
+                </div> 
+                <br>
+              <div onclick="changeBg2()" id="opt2"><input type="radio" hidden name="option" id="option2"><label
+                  for="option2" style="margin-left: 3px; margin-right: 2px;">2.</label><label for="option2">Lorem ipsum
+                  dolor sit amet consectetur adipisicing elit.</label>
+                </div>
+                 <br>
+              <div onclick="changeBg3()" id="opt3"><input type="radio" hidden name="option" id="option3"><label
+                  for="option3" style="margin-left: 3px; margin-right: 2px;">3.</label><label for="option3">Lorem ipsum
+                  dolor sit amet consectetur adipisicing elit.</label>
+                </div>
+                 <br>
+              <div onclick="changeBg4()" id="opt4"><input type="radio" hidden name="option" id="option4"><label
+                  for="option4" style="margin-left: 3px; margin-right: 2px;">4.</label><label for="option4">Lorem ipsum
+                  dolor sit amet consectetur adipisicing elit.</label>
+                </div> 
+                <br>
+            </div>
+            <div class="buttons">
+              <div class="previous">
+                <button class="button-49" id="previous" role="button">Previous</button>
+              </div>
+              <div class="clear">
+                <button class="button-49" id="clear" onclick="remvBg()" role="button" type="reset">Clear</button>
+              </div>
+              <div class="next">
+                <button class="button-49" id="next" role="button">Next</button>
+              </div>
+            </div>
+          </div>  
+          <!-- ===CAL + IMG === -->
+          <div class="rightImage">
+            <!-- ===EXAMPLE IMAGE=== -->
+            <div class="Qimage " style="margin-right: 90px;">
+              <img src="../imgs/sampleQ.jpg" alt="Question Image">
+            </div>
+            <!-- ===CALCULATOR=== -->
+            <div class="calculator" style="margin-right: 30px;">
+              <table>
+                <tr>
+                  <td colspan="3"><input type="text" id="result" /></td>
+                  <td><input type="button" style="background-color: red; color: white;" value="C" onclick="clr()" />
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="button" value="1" onclick="dis('1')" /> </td>
+                  <td><input type="button" value="2" onclick="dis('2')" /> </td>
+                  <td><input type="button" value="3" onclick="dis('3')" /> </td>
+                  <td><input type="button" value="/" onclick="dis('/')" /> </td>
+                </tr>
+                <tr>
+                  <td><input type="button" value="4" onclick="dis('4')" /> </td>
+                  <td><input type="button" value="5" onclick="dis('5')" /> </td>
+                  <td><input type="button" value="6" onclick="dis('6')" /> </td>
+                  <td><input type="button" value="-" onclick="dis('-')" /> </td>
+                </tr>
+                <tr>
+                  <td><input type="button" value="7" onclick="dis('7')" /> </td>
+                  <td><input type="button" value="8" onclick="dis('8')" /> </td>
+                  <td><input type="button" value="9" onclick="dis('9')" /> </td>
+                  <td><input type="button" value="+" onclick="dis('+')" /> </td>
+                </tr>
+                <tr>
+                  <td><input type="button" value="." onclick="dis('.')" /> </td>
+                  <td><input type="button" value="0" onclick="dis('0')" /> </td>
+
+                  <td><input type="button" value="=" style="color: white; background-color:rgb(55, 121, 55) ;"
+                      onclick="solve()" /> </td>
+                  <td><input type="button" value="*" onclick="dis('*')" /> </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+  <!-- =====FOOTER==== -->
+  <footer class=" text-center text-white">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © PICT IEEE Student Branch | Developed by PISB WEB TEAM
+    </div>
+  </footer>
+
+
+
+  <!-- ===BOOTSTRAP JS === -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"  crossorigin="anonymous"></script>
+  <!-- ===CUSTOM JS=== -->
+  <script src="../js/QuestionPage.js"></script>
+
+</body>
+</html>

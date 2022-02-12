@@ -1,0 +1,1871 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+  /*========== COLORS==========*/
+  --text-color: rgb(31, 31, 31);
+  --body-color: rgb(243, 243, 243);
+  --Qcircles-color: brown;
+  --CalciScreen-color: rgb(95, 236, 95);
+  --selectedOpt-color: rgb(255, 215, 35);
+  --Qcircles-hover: rgb(250, 238, 255);
+  --Bookmark-color: navy;
+  --answered-color: green;
+  --notViewed-color: brown;
+  --QNumber-color: black;
+
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins";
+}
+
+/*==================== BASE ====================*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  overflow-x: hidden;
+  color: var(--text-color);
+
+  background-image: linear-gradient(
+    to left bottom,
+    #121c16,
+    #011a19,
+    #00171f,
+    #001123,
+    #0d0421
+  );
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+footer {
+  font-size: 1.45rem;
+  font-weight: 600;
+  /* background-image: linear-gradient(
+    to left bottom,
+    #121c16,
+    #011a19,
+    #00171f,
+    #001123,
+    #0d0421
+  ); */
+  /* opacity: 88%; */
+}
+
+/* ===========TIMER=============== */
+
+#timer {
+  color: #f6f4f3;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-size: 0.7em;
+  letter-spacing: 5px;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+  display: inline-block;
+  padding-bottom: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+}
+
+.timer {
+  margin-left: 33%;
+}
+@media only screen and (max-width: 420px) and (min-width: 320px) {
+  .timer {
+    margin-left: 40px;
+  }
+}
+
+.hours {
+  background: #ef2f3c;
+  color: #183059;
+}
+
+.minutes {
+  background: #276fbf;
+}
+
+.seconds {
+  background: #f0a202;
+}
+.numbers {
+  font-family: "Montserrat", sans-serif;
+  color: #140909;
+  font-weight: 700;
+  font-size: 3em;
+}
+
+#minute,
+#second,
+#hour {
+  font-weight: 700;
+}
+
+/* ==========NAV - SUBMIT BTN========= */
+#submit_btn {
+  color: rgb(250, 94, 94);
+  font-weight: 900;
+  background-color: #000;
+  border: none;
+  /* margin-top: 5px; */
+  
+
+}
+
+
+/* =========HEADER ======= */
+header {
+  color: rgb(0, 0, 0);
+  margin-bottom: 1rem;
+}
+
+/* =============FOOTER========== */
+footer {
+  position: fixed;
+  bottom: 0 !important;
+  font-size: 15px;
+  width: 100%;
+}
+
+/* ============NAVBAR=============== */
+
+#navbar {
+  background-color: #000;
+}
+
+
+/* ========Q_BOX INFO AND  COLORS========= */
+.instruct {
+  font-size: 18px;
+  font-weight: 800;
+  margin-top: 15px;
+  margin-right: 25px;
+  padding: 0;
+}
+#ans {
+  background-color: green;
+}
+#not-ans {
+  background-color: brown;
+}
+#bookmark {
+  background-color: rgb(57, 3, 143);
+}
+#view-not-ans {
+  background-color: red;
+}
+/* ========BOTTOM BUTTONS======= */
+
+.buttons {
+  display: flex;
+}
+.buttons div button {
+  margin: 10px 30px;
+}
+
+.button-49,
+.button-49:after {
+  width: 120px;
+  height: 46px;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: "Bebas Neue", sans-serif;
+  background: linear-gradient(45deg, transparent 5%, #259104 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #00e6f6;
+  outline: transparent;
+  position: relative;
+}
+
+.buttons {
+  position: relative;
+  top: -30px;
+}
+
+.buttons #clear {
+  background: linear-gradient(45deg, transparent 5%, #3a3939 5%);
+  box-shadow: 6px 0px 0px #b6b6b6;
+}
+
+.buttons #clear:after {
+  background: linear-gradient(
+    45deg,
+    transparent 3%,
+    #b6b6b6 3%,
+    #b6b6b6 5%,
+    #3a3939 5%
+  );
+  text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #b6b6b6;
+}
+
+.buttons #previous {
+  background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
+  box-shadow: 6px 0px 0px #00e6f6;
+}
+
+.buttons #previous:after {
+  background: linear-gradient(
+    45deg,
+    transparent 3%,
+    #00e6f6 3%,
+    #00e6f6 5%,
+    #ff013c 5%
+  );
+  text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+}
+
+/* ==========CALCULATOR============ */
+
+.calculator {
+  margin-top: 30px;
+  position: relative;
+  top: -40px;
+  margin-left: 70px;
+}
+
+table {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+.calculator input[type="button"]:hover {
+  background-color: honeydew;
+  color: black;
+}
+.calculator input[type="button"] {
+  background-color: rgb(165, 165, 165);
+  color: rgb(255, 255, 255);
+  border: solid black 1px;
+  width: 100%;
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  padding: 15px;
+}
+
+body {
+  overflow: hidden;
+}
+
+.calculator input[type="text"] {
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  height: 40px;
+  width: 100%;
+  font-size: 20px;
+  border: 1px;
+  outline: none;
+}
+/* ================LEFT SIDE=========== */
+
+
+/* ==========RIGHT SIDE ============== */
+.questionMid {
+  display: flex;
+  margin-left: 60px;
+  margin-top: 30px;
+}
+
+/* =============QUESTION OPTIONS============ */
+.questionMid .options {
+  position: relative;
+  top: -26px;
+  max-width: 800px;
+  text-align: justify;
+  font-size: 17px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 10px;
+}
+.questionMid .options div {
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,  rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  padding: 15px;
+  margin-top: 0.75rem;
+  background-color: white;
+}
+.questionMid .options div:hover {
+  box-shadow: rgba(212, 16, 16, 0.61) 0px 0px 0px 3px !important;
+}
+
+/* ======EXAMPLE IMAGE========== */
+.questionMid .Qimage img {
+  padding: 5px;
+  width: 300px;
+  position: relative;
+  top: -10px;
+  margin-left: 60px;
+  margin-right: 20px;
+}
+.questionMid .Qimage img:hover {
+  cursor: pointer;
+}
+
+/* ==========QUESTION STATEMENT============ */
+.question {
+  display: flex;
+  padding: 10px;
+  align-items: flex-end;
+  margin-left: 60px;
+}
+.question .questionStatement {
+  max-width: 900px;
+  text-align: justify;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+/* ==========QUESTION NO FOR STATEMENT=========== */
+.Q__mark {
+  font-weight: 900;
+  font-size: 30px;
+}
+
+/* ============SIDE BAR=========== */
+#sideBar {
+  width: 350px;
+}
+
+/* =============DIVIDER========== */
+.divider-box {
+  font-size: 18px;
+  background: rgb(37, 37, 32);
+  color: whitesmoke;
+}
+
+/* =========QUESTION NO. HEADER========== */
+.question-box {
+  font-size: 22px;
+  background: rgb(37, 37, 32);
+  color: whitesmoke;
+  display: block;
+  padding: 5px;
+}
+
+/* ==========QUESTION CIRCLES=========== */
+.Q_Circles {
+  background-color: var(--Qcircles-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 2px 2px black;
+  cursor: pointer;
+}
+.Q_Numbers {
+  font-weight: 700;
+  font-size: 25px;
+  color: var(--QNumber-color);
+}
+.Q_Circles:hover {
+  transform: scale(1.2);
+}
+
+.box label {
+  position: relative;
+  cursor: pointer;
+}
+.box label input {
+  display: none;
+}
+
+.box label span {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 900;
+  width: 50px;
+  height: 50px;
+  background: var(--Qcircles-color);
+  border: 1px solid #444;
+  color: black;
+  border-radius: 50%;
+}
+
+.box label input:checked ~ span {
+  color: #fff;
+  border: 1px solid #e4e4e4;
+}
+
+.box label input:checked ~ span:before {
+  content: "";
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #e2cd0a;
+  z-index: -1;
+  filter: blur(10px);
+}
+
+/* ==========MEDIA QUERIES============ */
+
+
+@media (max-width:2000px) and (min-width:1800px)
+{
+  #navbar
+  {
+    height: 80px;
+  }
+  #sideBar {
+    width: 550px;
+  }
+  .Q_Circles {
+
+    width: 80px;
+    height:70px;
+    padding: 0;
+  }
+  .Q_Numbers {
+
+    font-size: 25px;
+  }
+  .box label span {
+    font-size: 36px;
+    width: 80px;
+    height: 70px;
+  }
+  .instruct {
+    font-size: 27px;
+    padding: 0;
+  }
+  .divider-box {
+    font-size: 32px;
+    height: 40px;
+  }
+  .question-box
+  {
+    height: 30px;
+    font-size: 40px;
+  }
+  .question {
+    display: flex;
+    padding: 10px;
+  }
+  .question .questionStatement {
+    max-width: 1150px;
+    font-size: 29px;
+    line-height: 40px;
+  }
+  .Q__mark
+  {
+    font-size: 50px;
+  }
+  .questionMid {
+    display: flex;
+    margin-left: 60px;
+    margin-top: 90px;
+  }
+  .questionMid .options {
+    position: relative;
+    top: -36px;
+    width: 800px;
+    font-size: 26px;
+    padding: 0px 20px;
+  }
+  .questionMid .options div {
+    padding: 15px;
+    width: 800px;
+    padding: 20px;
+    margin-top: 0.75rem;
+  }
+.questionMid .Qimage img {
+    padding: 5px;
+    width: 400px;
+    position: relative;
+    top: -25px;
+  }
+.calculator {
+  position: relative;
+}
+.calculator input[type="button"] {
+  width: 95px;
+  font-size: 26px;
+  padding: 20px;
+}
+.calculator input[type="text"] {
+  height: 70px;
+  width: 290px;
+  font-size: 20px;
+}
+
+.buttons {
+  display: flex;
+  margin-left: 100px;
+}
+.buttons div button {
+  margin: 40px 30px;
+}
+
+.button-49,
+.button-49:after {
+  width: 150px;
+  height: 66px;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+
+.buttons {
+  position: relative;
+  top: -30px;
+}
+
+
+}
+
+@media (max-width:1800px) and (min-width:1700px)
+{
+  #sideBar {
+    width: 520px;
+  }
+  .Q_Circles {
+
+    width: 60px;
+    height:60px;
+    padding: 0;
+  }
+  .Q_Numbers {
+
+    font-size: 25px;
+  }
+  .box label span {
+    font-size: 36px;
+    width: 60px;
+    height:60px;
+  }
+  .instruct {
+    font-size: 21px;
+    padding: 0;
+  }
+  .divider-box {
+    font-size: 32px;
+    height: 50px;
+  }
+  .question-box
+  {
+    height: 30px;
+    font-size: 40px;
+  }
+  .question {
+    display: flex;
+    padding: 10px;
+  }
+  .question .questionStatement {
+    max-width: 1150px;
+    font-size: 29px;
+    line-height: 34px;
+  }
+  .Q__mark
+  {
+    font-size: 50px;
+  }
+  .questionMid {
+    display: flex;
+    margin-left: 60px;
+    margin-top: 90px;
+  }
+  .questionMid .options {
+    position: relative;
+    top: -45px;
+    width: 800px;
+    font-size: 26px;
+    padding: 0px 20px;
+  }
+  .questionMid .options div {
+    padding: 15px;
+    width: 800px;
+    padding: 20px;
+    margin-top: 0.75rem;
+  }
+.questionMid .Qimage img {
+    padding: 5px;
+    width: 400px;
+    position: relative;
+    top: -75px;
+  }
+.calculator {
+  position: relative;
+  top: -95px;
+}
+.calculator input[type="button"] {
+  width: 95px;
+  font-size: 26px;
+  padding: 15px;
+}
+.calculator input[type="text"] {
+  height: 60px;
+  width: 290px;
+  font-size: 30px;
+}
+
+.buttons {
+  display: flex;
+  margin-left: 100px;
+}
+.buttons div button {
+  margin: 5px 30px;
+}
+
+.button-49,
+.button-49:after {
+  width: 150px;
+  height: 66px;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+
+.buttons {
+  position: relative;
+  top: -30px;
+}
+
+
+}
+
+@media (max-width:1700px) and (min-width:1650px)
+{
+  #sideBar {
+    width: 500px;
+  }
+  .Q_Circles {
+
+    width: 53px;
+    height:60px;
+
+  }
+  .Q_Numbers {
+
+    font-size: 22px;
+    font-weight: 800;
+  }
+  .box label span {
+    font-size: 25px;
+    width: 53px;
+    height:60px;
+
+  }
+  .instruct {
+    font-size: 17px;
+    padding: 0;
+  }
+  .divider-box {
+    font-size: 32px;
+    height: 40px;
+  }
+  .question-box
+  {
+    height: 30px;
+    font-size: 40px;
+  }
+  .question {
+    display: flex;
+    padding: 10px;
+  }
+  .question .questionStatement {
+    max-width: 1150px;
+    font-size: 26px;
+    line-height: 34px;
+  }
+  .Q__mark
+  {
+    font-size: 50px;
+  }
+  .questionMid {
+    display: flex;
+    margin-left: 60px;
+    margin-top: 90px;
+  }
+  .questionMid .options {
+    position: relative;
+    top: -65px;
+    width: 800px;
+    font-size: 26px;
+    padding: 0px 20px;
+  }
+  .questionMid .options div {
+    padding: 15px;
+    width: 800px;
+    padding: 20px;
+    margin-top: 0.75rem;
+  }
+.questionMid .Qimage img {
+    padding: 5px;
+    width: 400px;
+    position: relative;
+    top: -75px;
+  }
+.calculator {
+  position: relative;
+  top: -95px;
+}
+.calculator input[type="button"] {
+  width: 95px;
+  font-size: 26px;
+  padding: 15px;
+}
+.calculator input[type="text"] {
+  height: 60px;
+  width: 290px;
+  font-size: 30px;
+}
+
+.buttons {
+  display: flex;
+  margin-left: 100px;
+}
+.buttons div button {
+  margin: 5px 30px;
+}
+
+.button-49,
+.button-49:after {
+  width: 150px;
+  height: 66px;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+
+.buttons {
+  position: relative;
+  top: -50px;
+}
+
+
+
+}
+
+@media (max-width:1650px) and (min-width:1595px)
+{
+  #sideBar {
+    width: 500px;
+  }
+  .Q_Circles {
+
+    width: 45px;
+    height:55px;
+
+  }
+  .Q_Numbers {
+
+    font-size: 22px;
+    font-weight: 800;
+  }
+  .box label span {
+    font-size: 25px;
+    width: 45px;
+    height:55px;
+
+  }
+  .instruct {
+    font-size: 16px;
+    padding: 0;
+  }
+  .divider-box {
+    font-size: 28px;
+    height: 36px;
+  }
+  .question-box
+  {
+    height: 30px;
+    font-size: 40px;
+  }
+  .question {
+    display: flex;
+    padding: 10px;
+  }
+  .question .questionStatement {
+    max-width: 1150px;
+    font-size: 26px;
+    line-height: 34px;
+  }
+  .Q__mark
+  {
+    font-size: 50px;
+  }
+  .questionMid {
+    display: flex;
+    /* margin-left: 60px; */
+    margin-top: 90px;
+  }
+  .questionMid .options {
+    position: relative;
+    top: -65px;
+    width: 800px;
+    font-size: 26px;
+    padding: 0px 20px;
+  }
+  .questionMid .options div {
+    padding: 15px;
+    width: 800px;
+    padding: 20px;
+    margin-top: 0.75rem;
+  }
+.questionMid .Qimage img {
+    padding: 5px;
+    width: 400px;
+    position: relative;
+    top: -75px;
+  }
+.calculator {
+  position: relative;
+  top: -95px;
+}
+.calculator input[type="button"] {
+  width: 95px;
+  font-size: 26px;
+  padding: 15px;
+}
+.calculator input[type="text"] {
+  height: 60px;
+  width: 290px;
+  font-size: 30px;
+}
+
+.buttons {
+  display: flex;
+  margin-left: 100px;
+}
+.buttons div button {
+  margin: 5px 30px;
+}
+
+.button-49,
+.button-49:after {
+  width: 150px;
+  height: 66px;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+
+.buttons {
+  position: relative;
+  top: -50px;
+}
+
+
+
+}
+@media (max-width:1590px) and (min-width:1495px)
+{
+  #sideBar {
+    width: 500px;
+  }
+  .container-left
+  {
+    width: 1200px;
+  }
+  .Q_Circles {
+
+    width: 45px;
+    height:55px;
+
+  }
+  .Q_Numbers {
+
+    font-size: 22px;
+    font-weight: 800;
+  }
+  .box label span {
+    font-size: 25px;
+    width: 45px;
+    height:55px;
+
+  }
+  .instruct {
+    font-size: 16px;
+    padding: 0;
+  }
+  .divider-box {
+    font-size: 28px;
+    height: 36px;
+  }
+  .question-box
+  {
+    height: 30px;
+    font-size: 40px;
+  }
+  .question {
+    display: flex;
+    padding: 10px;
+  }
+  .question .questionStatement {
+    max-width: 1050px;
+    font-size: 26px;
+    line-height: 34px;
+  }
+  .Q__mark
+  {
+    font-size: 45px;
+  }
+  .questionMid {
+    display: flex;
+    /* margin-left: 60px; */
+    margin-top: 90px;
+  }
+  .questionMid .options {
+    position: relative;
+    top: -65px;
+    width: 700px;
+    font-size: 23px;
+    padding: 0px 20px;
+  }
+  .questionMid .options div {
+    padding: 15px;
+    width: 700px;
+    padding: 20px;
+    margin-top: 0.75rem;
+  }
+.questionMid .Qimage img {
+    padding: 5px;
+    width: 370px;
+    position: relative;
+    top: -95px;
+    left: -40px;
+  }
+.calculator {
+  position: relative;
+  top: -95px;
+  left: -50px;
+}
+.calculator input[type="button"] {
+  width: 90px;
+  font-size: 26px;
+  padding: 15px;
+}
+.calculator input[type="text"] {
+  height: 60px;
+  width: 275px;
+  font-size: 30px;
+}
+
+.buttons {
+  display: flex;
+  margin-left: 100px;
+}
+.buttons div button {
+  margin: 5px 30px;
+}
+
+.button-49,
+.button-49:after {
+  width: 150px;
+  height: 66px;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+
+.buttons {
+  position: relative;
+  top: -50px;
+}
+
+
+
+}
+
+@media (max-width:1495px) and (min-width:1395px)
+{
+  #sideBar {
+    width: 500px;
+  }
+  .container-left
+  {
+    width: 1100px;
+  }
+  .Q_Circles {
+
+    width: 45px;
+    height:55px;
+
+  }
+  .Q_Numbers {
+
+    font-size: 22px;
+    font-weight: 800;
+  }
+  .box label span {
+    font-size: 25px;
+    width: 45px;
+    height:55px;
+
+  }
+  .instruct {
+    font-size: 16px;
+    padding: 0;
+  }
+  .divider-box {
+    font-size: 28px;
+    height: 36px;
+  }
+  .question-box
+  {
+    height: 30px;
+    font-size: 40px;
+  }
+  .question {
+    display: flex;
+    padding: 10px;
+  }
+  .question .questionStatement {
+    max-width: 970px;
+    font-size: 25px;
+    line-height: 34px;
+  }
+  .Q__mark
+  {
+    font-size: 40px;
+  }
+  .questionMid {
+    display: flex;
+    /* margin-left: 60px; */
+    margin-top: 90px;
+  }
+  .questionMid .options {
+    position: relative;
+    top: -65px;
+    width: 700px;
+    font-size: 23px;
+    padding: 0px 20px;
+  }
+  .questionMid .options div {
+    padding: 15px;
+    width: 700px;
+    padding: 20px;
+    margin-top: 0.75rem;
+  }
+.questionMid .Qimage img {
+    padding: 5px;
+    width: 370px;
+    position: relative;
+    top: -95px;
+    left: -20px;
+  }
+.calculator {
+  position: relative;
+  top: -95px;
+  left: -20px;
+}
+.calculator input[type="button"] {
+  width: 65px;
+  font-size: 26px;
+  padding: 15px;
+}
+.calculator input[type="text"] {
+  height: 60px;
+  width: 205px;
+  font-size: 30px;
+}
+
+.buttons {
+  display: flex;
+  margin-left: 60px;
+}
+.buttons div button {
+  margin: 5px 30px;
+}
+
+.button-49,
+.button-49:after {
+  width: 150px;
+  height: 66px;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+
+.buttons {
+  position: relative;
+  top: -50px;
+}
+
+
+
+}
+
+
+@media (max-width:1200px) and (min-width:1140px)
+{
+  #sideBar {
+    width: 400px;
+  }
+  .Q_Circles {
+
+    
+    width: 40px;
+    height:40px;
+
+  }
+  .Q_Numbers {
+
+    font-size: 21px;
+    font-weight: 800;
+  }
+  .box label span {
+    font-size: 25px;
+    
+    width: 45px;
+    height:45px;
+
+  }
+  .instruct {
+    font-size: 19px;
+    padding: 0;
+  }
+  .divider-box {
+    font-size: 24px;
+    height: 32px;
+  }
+  .question-box
+  {
+    height: 30px;
+    font-size: 23px;
+  }
+  .question {
+    display: flex;
+    /* padding: 10px; */
+  }
+  .question .questionStatement {
+    max-width: 800px;
+    font-size: 21px;
+    line-height: 34px;
+  }
+  .Q__mark
+  {
+    font-size: 40px;
+  }
+  .questionMid {
+    display: flex;
+    /* margin-left: 60px; */
+    margin-top: 90px;
+  }
+  .questionMid .options {
+    position: relative;
+    top: -65px;
+    width: 500px;
+    font-size: 17px;
+    padding: 0px 20px;
+  }
+  .container-left
+  {
+    width: 900px;
+    /* margin-left: -400px; */
+  }
+  .questionMid .options div {
+   
+    width: 500px;
+    padding: 13px;
+    margin-top: 0.75rem;
+  }
+.questionMid .Qimage img {
+    padding: 5px;
+    width: 260px;
+    position: relative;
+    top: -75px;
+  }
+.calculator {
+  position: relative;
+  top: -95px;
+}
+.calculator input[type="button"] {
+  width: 65px;
+  font-size: 21px;
+  padding: 15px;
+}
+.calculator input[type="text"] {
+  height: 60px;
+  width: 190px;
+  font-size: 20px;
+}
+
+.buttons {
+  display: flex;
+  margin-left: 20px;
+}
+.buttons div button {
+  margin: 5px 30px;
+}
+
+.button-49,
+.button-49:after {
+  width: 100px;
+  height: 46px;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+
+.buttons {
+  position: relative;
+  top: -50px;
+}
+
+
+
+}
+
+@media (max-width:1140px) and (min-width:1090px)
+{
+  #sideBar {
+    width: 400px;
+  }
+  .Q_Circles {
+
+    
+    width: 40px;
+    height:40px;
+
+  }
+  .Q_Numbers {
+
+    font-size: 21px;
+    font-weight: 800;
+  }
+  .box label span {
+    font-size: 25px;
+    
+    width: 45px;
+    height:45px;
+
+  }
+  .instruct {
+    font-size: 19px;
+    padding: 0;
+  }
+  .divider-box {
+    font-size: 24px;
+    height: 32px;
+  }
+  .question-box
+  {
+    height: 30px;
+    font-size: 23px;
+  }
+  .question {
+    display: flex;
+    /* padding: 10px; */
+  }
+  .question .questionStatement {
+    max-width: 800px;
+    font-size: 16px;
+    line-height: 34px;
+  }
+  .Q__mark
+  {
+    font-size: 40px;
+  }
+  .questionMid {
+    display: flex;
+    /* margin-left: 60px; */
+    margin-top: 90px;
+  }
+  .questionMid .options {
+    position: relative;
+    top: -65px;
+    width: 450px;
+    font-size: 15px;
+    padding: 0px 15px;
+  }
+  .container-left
+  {
+    width: 820px;
+    /* margin-left: -400px; */
+  }
+  .questionMid .options div {
+   
+    width: 450px;
+    padding: 10px;
+    margin-top: 0.75rem;
+  }
+.questionMid .Qimage img {
+    padding: 5px;
+    width: 260px;
+    position: relative;
+    top: -75px;
+    left: -70px;
+  }
+.calculator {
+  position: relative;
+  top: -95px;
+  left: -70px;
+}
+.calculator input[type="button"] {
+  width: 60px;
+  font-size: 21px;
+  padding: 15px;
+}
+.calculator input[type="text"] {
+  height: 60px;
+  width: 190px;
+  font-size: 20px;
+}
+
+.buttons {
+  display: flex;
+  margin-left: 0px;
+}
+.buttons div button {
+  margin: 5px 30px;
+}
+
+.button-49,
+.button-49:after {
+  width: 100px;
+  height: 46px;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+
+.buttons {
+  position: relative;
+  top: -50px;
+}
+
+
+
+}
+
+@media (max-width:1090px) and (min-width:990px)
+{
+  #sideBar {
+    width: 400px;
+  }
+  .Q_Circles {
+
+    
+    width: 40px;
+    height:40px;
+
+  }
+  .Q_Numbers {
+
+    font-size: 21px;
+    font-weight: 800;
+  }
+  .box label span {
+    font-size: 25px;
+    
+    width: 45px;
+    height:45px;
+
+  }
+  .instruct {
+    font-size: 19px;
+    padding: 0;
+  }
+  .divider-box {
+    font-size: 24px;
+    height: 32px;
+  }
+  .question-box
+  {
+    height: 30px;
+    font-size: 23px;
+  }
+  .question {
+    display: flex;
+    /* padding: 10px; */
+  }
+  .question .questionStatement {
+    max-width: 670px;
+    font-size: 17px;
+    line-height: 34px;
+  }
+  .Q__mark
+  {
+    font-size: 30px;
+  }
+  .container-left
+  {
+    width: 730px;
+    /* margin-left: -400px; */
+  }
+  .questionMid {
+    display: flex;
+    /* margin-left: 60px; */
+    margin-top: 90px;
+  }
+  .questionMid .options {
+    position: relative;
+    top: -75px;
+    width: 400px;
+    font-size: 14px;
+    padding: 0px 10px;
+  }
+
+  .questionMid .options div {
+   
+    width: 400px;
+
+    padding: 5px;
+    margin-top: 0.75rem;
+  }
+.questionMid .Qimage img {
+    padding: 5px;
+    width: 220px;
+    position: relative;
+    top: -75px;
+    left: -50px;
+  }
+.calculator {
+  position: relative;
+  top: -95px;
+  left: -70px;
+  
+}
+.calculator input[type="button"] {
+  width: 60px;
+  font-size: 21px;
+  padding: 10px;
+}
+.calculator input[type="text"] {
+  height: 50px;
+  width: 180px;
+  font-size: 20px;
+}
+
+.buttons {
+  display: flex;
+  margin-left: 0px;
+}
+.buttons div button {
+  margin: 5px 20px;
+}
+
+.button-49,
+.button-49:after {
+  width: 100px;
+  height: 46px;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+
+.buttons {
+  position: relative;
+  top: -70px;
+}
+
+
+
+}
+
+
+
+
+
+
+    /* ---min1350px */
+
+/* ----1150===1000 */
+
+
+
+
+@media (max-width:991px) {
+
+  .credenzlogo{
+      display: none;
+  }
+}
+
+
+/* =========NAVBAR MEDIA QUERIES========= */
+@media (max-width:2000px) and (min-width:1700px)
+{
+  footer
+  {
+    font-size: 20px;
+  }
+  #timer
+  {
+    position: relative;
+    top: 20px;
+    
+  }
+  
+.days,
+.hours,
+.minutes,
+.seconds {
+  display: inline-block;
+  /* padding-top: 10px;   */
+  padding-bottom: 70px;
+  position: relative;
+  top: -20px;
+  height: 60px;
+  font-size: 20px;
+  width: 90px;
+  border-radius: 5px;
+}
+
+.timer {
+  margin-left: 33%;
+}
+    #navbar
+{
+    height: 90px;
+}
+.cretronix__logo
+{
+    width: 80px;
+}
+.credenzlogo
+{
+    width: 150px;
+}
+#nav-link
+{
+    font-size: 30px;
+}
+}
+
+@media (max-width:1760px) and (min-width:1700px)
+{
+  footer
+  {
+    font-size: 20px;
+  }
+  #timer
+  {
+    position: relative;
+    top: 20px;
+    
+  }
+  
+.days,
+.hours,
+.minutes,
+.seconds {
+  display: inline-block;
+  /* padding-top: 10px;   */
+  padding-bottom: 70px;
+  position: relative;
+  top: -20px;
+  height: 30px;
+  font-size: 20px;
+  width: 90px;
+  border-radius: 5px;
+}
+
+.timer {
+  margin-left: 28%;
+}
+    #navbar
+{
+    height: 80px;
+}
+.cretronix__logo
+{
+    width: 90px;
+}
+.credenzlogo
+{
+    width: 150px;
+}
+#nav-link
+{
+    font-size: 30px;
+}
+}
+@media (max-width:1700px) and (min-width:1500px)
+{
+  .days,
+.hours,
+.minutes,
+.seconds {
+  display: inline-block;
+  /* padding-top: 10px;   */
+  padding-bottom: 40px;
+  position: relative;
+  /* top: -px; */
+  height: 59px;
+  font-size: 16px;
+  width: 80px;
+  border-radius: 5px;
+}
+
+.timer {
+  margin-left: 32%;
+}
+  footer
+  {
+    font-size: 20px;
+  }
+    #navbar
+{
+    height: 70px;
+}
+.cretronix__logo
+{
+    width: 70px;
+}
+.credenzlogo
+{
+    width: 130px;
+}
+#nav-link
+{
+    font-size: 25px;
+}
+}
+@media (max-width:1500px) and (min-width:1300px)
+{
+  footer
+  {
+    font-size: 20px;
+  }
+    #navbar
+{
+    height: 70px;
+}
+.cretronix__logo
+{
+    width: 70px;
+}
+.credenzlogo
+{
+    width: 130px;
+}
+#nav-link
+{
+    font-size: 25px;
+}
+}
+
+@media (max-width:1300px) and (min-width:1200px)
+{
+
+    #navbar
+{
+    height: 60px;
+}
+.cretronix__logo
+{
+    width: 50px;
+}
+.credenzlogo
+{
+    width: 100px;
+    height: 40px;
+    /* margin-top:100px;; */
+}
+#nav-link
+{
+    font-size: 20px;
+}
+}
+
+@media (max-width:1200px) and (min-width:1100px)
+{
+
+    #navbar
+{
+    height: 60px;
+}
+.cretronix__logo
+{
+    width: 60px;
+}
+.credenzlogo
+{
+    width: 110px;
+}
+#nav-link
+{
+    font-size: 20px;
+}
+.days,
+.hours,
+.minutes,
+.seconds {
+  display: inline-block;
+  padding-bottom: 10px;
+
+  height: 40px;
+  width: 43px;
+  border-radius: 5px;
+}
+
+#timer
+{
+  margin-left: 0%;
+  /* padding: 10px; */
+}
+}
+
+@media (max-width:1100px) and (min-width:990px)
+{
+
+    #navbar
+{
+    height: 60px;
+}
+.cretronix__logo
+{
+    width: 45px;
+}
+.credenzlogo
+{
+    width: 90px;
+}
+#nav-link
+{
+    font-size: 18px;
+}
+#submit_btn {
+  color: rgb(250, 94, 94);
+  font-weight: 900;
+  font-size: 18px;
+  background-color: #000;
+  border: none;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+  /* display: inline-block; */
+  /* padding-bottom: 10px; */
+
+  height: 40px;
+  width:37px;
+  border-radius: 5px;
+}
+
+#timer
+{
+  margin-left: 0%;
+  /* padding: 10px; */
+  
+}
+}
+
+
+
+
+
+@media (max-width:420px) and (min-width:300px)
+{
+
+
+.cretronix__logo
+{
+    width: 50px;
+}
+.credenzlogo
+{
+    width: 130px;
+}
+#nav-link
+{
+    font-size: 25px;
+}
+}
+
+
+
+
+/* =============OLD MEIA QUERIES========== */
+
+@media screen and (max-width: 400px) {
+  .timer {
+    margin-left: 0px !important;
+  }
+  body {
+    overflow-x: hidden !important;
+    overflow-y: scroll;
+  }
+  footer {
+    position: relative !important;
+  }
+  .questionMid .options {
+    margin-top: 7vh;
+  }
+  #sideBar {
+    width: 325px;
+    background-image: linear-gradient(45deg, black, #040039);
+    z-index: 1;
+  }
+  .question {
+    margin-left: 5px !important;
+  }
+  .countDown {
+    margin: 10px;
+  }
+  .headerForOption {
+    display: block;
+  }
+  .submitTest button {
+    margin-left: 150px;
+  }
+  .questionMid {
+    flex-direction: column-reverse;
+    margin-left: 5px !important;
+    position: none;
+  }
+  .questionMid .Qimage img {
+    margin: 5px;
+    position: initial;
+  }
+  .buttons div button {
+    font-size: 15px;
+    margin: 10px 20px;
+  }
+  .button-49,
+  .button-49:after {
+    width: 84px;
+    height: 44px;
+  }
+  .calculator {
+    margin: 0px 0px 0px 10px;
+    position: initial;
+  }
+}
+
+@media screen and (min-width: 420px) and (max-width: 950px) {
+  .questionMid {
+    flex-direction: column-reverse !important;
+  }
+  .rightImage {
+    display: flex;
+    margin-left: -60px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

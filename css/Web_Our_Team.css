@@ -1,0 +1,982 @@
+:root
+{
+    --primary :#07f5e1;
+
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+body
+{
+  margin: 0;
+  padding: 0;
+
+  /* 1 */
+  /* background-image: linear-gradient(to right bottom, #000000, #0f0108, #160312, #19071c, #160c26, #170c28, #190c29, #1b0c2b, #230722, #260319, #26010e, #250101); */
+
+
+  /* 2 */
+  background-image: linear-gradient(to left bottom, #121c16, #011a19, #00171f, #001123, #0d0421);
+
+
+  /* 3 */
+  /* background-image: linear-gradient(to left top, #000000, #150005, #210106, #2a0104, #330000); */
+
+
+}
+
+#navbar
+{
+  background-color: #000;
+}
+#nav-link
+{
+    font-size: 20px;
+}
+.pagehead
+{
+    color: whitesmoke;
+    font-weight: 500;
+    margin-left: 38.8%;
+    font-size: 25px;
+}
+
+.head
+{
+    text-align: center;
+    margin: auto;
+    max-width: 90vh;
+    padding-block: 7px;
+    font-size: 25px;
+    color: var(--primary);
+    border-bottom: 5px solid var(--primary);
+    margin-bottom: 3px;
+    letter-spacing: 5px; 
+    width: fit-content;
+
+}
+
+.sub-head
+{
+    text-align: center;
+    margin: auto;
+    max-width: 30vh;
+    margin-bottom: 8px; 
+    color: var(--primary);
+    font-size: 20px;
+    width: fit-content;
+    letter-spacing: 4px;
+
+}
+.content
+{
+    margin-top: 20px;
+    
+}
+section
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    /* width: 900px;
+    margin: auto; */
+   
+}
+.cretronix__logo
+{
+    width: 50px;
+}
+.credenzlogo
+{
+    width: 100px;
+}
+.team
+{
+    width: 235px;
+    height: 320px;
+    overflow: hidden;
+    /* margin: 8px; */
+    border: 2px solid var(--primary);
+    border-radius: 16px;
+    position: relative;
+    background-color: #615a5a;
+    /* overflow: hidden; */
+
+}
+
+
+.team::before
+{
+    content: '';
+    background-image: var(--img);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    filter: blur(4px) ;
+
+
+
+}
+
+.team img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 235px;
+    height: 320px;
+    border-radius: 16px;
+    z-index: 3;
+    object-fit: cover;
+    border: none;
+}
+
+.team:hover img
+{
+    width: 160px;
+    height: 200px;
+    border: 2px solid var(--primary);
+    left: 40px;
+    top: 8px;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.team .info
+{
+    background-color: aliceblue;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: #000000;
+    padding: 10px;
+    border-top:18px solid var(--primary);
+    border-radius: 50% 50% 0px 0px ;
+    padding-top: 70px;
+    text-align: center;
+    transform: scale(1)
+
+    
+}
+
+.team .name
+{
+    font-size: 25px;
+    font-weight: 600;
+    
+    text-transform: capitalize;
+}
+
+.team .title
+{
+    color: grey;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.team:hover .info
+{
+    transform: scale(1);
+}
+
+.team .social
+{
+    padding-block: .5px;
+    font-size: 20px;
+
+}
+
+.team .social i
+{
+    display: inline-block;
+    width: 38px;
+    padding: 10px;
+    background: rgb(190, 190, 190);
+    border-radius: 8px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.team .social i:hover
+{
+    color: var(--primary);
+    background-color: #070007;
+}
+
+
+#event__navbar
+{
+  background: #000;
+}
+
+.event__logo
+{
+  width: 60px;
+  height: 40px;
+}
+
+.pisb__logo
+{
+  width: 100px;
+  height: 40px;
+}
+
+
+footer
+{
+    font-size: 1.25rem;
+    /* background:linear-gradient(55deg,#7e028f,#0e0b3d); */
+    font-weight: 500;
+    background-image: linear-gradient(to left bottom, #121c16, #011a19, #00171f, #001123, #0d0421);
+
+}
+
+
+
+@media (max-width:991px) {
+
+    .credenzlogo{
+        display: none;
+    }
+}
+
+
+
+
+
+
+@media (max-width:1280px) and (min-width:1200px)
+{
+    section
+    {
+        gap: 5px;
+    }
+}
+
+@media (max-width:1200px) and (min-width:1150px)
+{
+    section
+    {
+        gap: 5px;
+    }
+    .team
+{
+    width: 205px;
+    height: 280px;
+    overflow: hidden;
+    /* margin: 8px; */
+    border: 2px solid var(--primary);
+    border-radius: 16px;
+    position: relative;
+    background-color: #615a5a;
+    /* overflow: hidden; */
+
+}
+
+
+
+.team::before
+{
+    content: '';
+    background-image: var(--img);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    filter: blur(4px) ;
+
+
+
+}
+.team .name
+{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 5px;
+    text-transform: capitalize;
+}
+
+.team img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 205px;
+    height: 280px;
+    border-radius: 16px;
+    z-index: 3;
+    object-fit: cover;
+    border: none;
+}
+
+.team:hover img
+{
+    width: 150px;
+    height: 180px;
+    border: 2px solid var(--primary);
+    left: 26px;
+    top: 2px;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.team .info
+{
+    background-color: aliceblue;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: #000000;
+    padding: 10px;
+    border-top:18px solid var(--primary);
+    border-radius: 50% 50% 0px 0px ;
+    padding-top: 70px;
+    text-align: center;
+    transform: scale(1)
+
+    
+}
+.team .social
+{
+    padding-block: .5px;
+    font-size: 15px;
+
+}
+
+.team .social i
+{
+    display: inline-block;
+    width: 38px;
+    padding: 10px;
+    background: rgb(190, 190, 190);
+    border-radius: 8px;
+    /* margin: 2px; */
+    cursor: pointer;
+}
+
+}
+
+
+@media (max-width:1150px) and (min-width:1000px)
+{
+    section
+    {
+        gap: 5px;
+    }
+    .team
+    {
+        width: 185px;
+        height: 250px;
+        overflow: hidden;
+        /* margin: 8px; */
+        border: 2px solid var(--primary);
+        border-radius: 16px;
+        position: relative;
+        background-color: #615a5a;
+        /* overflow: hidden; */
+    
+    }
+    
+    
+    
+    .team::before
+    {
+        content: '';
+        background-image: var(--img);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        filter: blur(4px) ;
+    
+    
+    
+    }
+    .team .name
+    {
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 5px;
+        text-transform: capitalize;
+    }
+    
+    .team img
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 185px;
+        height: 250px;
+        border-radius: 16px;
+        z-index: 3;
+        object-fit: cover;
+        border: none;
+    }
+    
+    .team:hover img
+    {
+        width: 110px;
+        height: 140px;
+        border: 2px solid var(--primary);
+        left: 36px;
+        top: 2px;
+        -webkit-transition: all 500ms ease;
+        -moz-transition: all 500ms ease;
+        -ms-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+    }
+    
+    .team .info
+    {
+        background-color: aliceblue;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        color: #000000;
+        padding: 10px;
+        border-top:18px solid var(--primary);
+        border-radius: 50% 50% 0px 0px ;
+        padding-top: 70px;
+        text-align: center;
+        transform: scale(1)
+    
+        
+    }
+    .team .social
+    {
+        padding-block: .5px;
+        font-size: 14px;
+    
+    }
+    
+    .team .social i
+    {
+        display: inline-block;
+        width: 28px;
+        padding: 10px;
+        background: rgb(190, 190, 190);
+        border-radius: 8px;
+        /* margin: 2px; */
+        cursor: pointer;
+    }
+}
+
+
+@media (max-width:1500px) and (min-width:1400px)
+{
+    
+section
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    /* width: 900px;
+    margin: auto; */
+   
+}
+
+.team
+{
+    width: 265px;
+    height: 340px;
+    overflow: hidden;
+    /* margin: 8px; */
+    border: 2px solid var(--primary);
+    border-radius: 16px;
+    position: relative;
+    background-color: #615a5a;
+    /* overflow: hidden; */
+
+}
+
+
+.team::before
+{
+    content: '';
+    background-image: var(--img);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    filter: blur(4px) ;
+
+
+
+}
+
+.team img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 265px;
+    height: 340px;
+    border-radius: 16px;
+    z-index: 3;
+    object-fit: cover;
+    border: none;
+}
+
+.team:hover img
+{
+    width: 160px;
+    height: 200px;
+    border: 2px solid var(--primary);
+    left: 47px;
+    top: 8px;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.team .info
+{
+    background-color: aliceblue;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: #000000;
+    padding: 10px;
+    border-top:18px solid var(--primary);
+    border-radius: 50% 50% 0px 0px ;
+    padding-top: 70px;
+    text-align: center;
+    transform: scale(1)
+
+    
+}
+
+.team .name
+{
+    font-size: 25px;
+    font-weight: 600;
+    
+    text-transform: capitalize;
+}
+
+.team .title
+{
+    color: grey;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+}
+@media (max-width:1800px) and (min-width:1600px)
+{
+    
+section
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    /* width: 900px;
+    margin: auto; */
+   
+}
+
+.team
+{
+    width: 285px;
+    height: 340px;
+    overflow: hidden;
+    /* margin: 8px; */
+    border: 2px solid var(--primary);
+    border-radius: 16px;
+    position: relative;
+    background-color: #615a5a;
+    /* overflow: hidden; */
+
+}
+
+
+.team::before
+{
+    content: '';
+    background-image: var(--img);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    filter: blur(4px) ;
+
+
+
+}
+
+.team img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 285px;
+    height: 340px;
+    border-radius: 16px;
+    z-index: 3;
+    object-fit: cover;
+    border: none;
+}
+
+.team:hover img
+{
+    width: 160px;
+    height: 200px;
+    border: 2px solid var(--primary);
+    left: 55px;
+    top: 8px;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.team .info
+{
+    background-color: aliceblue;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: #000000;
+    padding: 10px;
+    border-top:18px solid var(--primary);
+    border-radius: 50% 50% 0px 0px ;
+    padding-top: 70px;
+    text-align: center;
+    transform: scale(1)
+
+    
+}
+
+.team .name
+{
+    font-size: 25px;
+    font-weight: 600;
+    
+    text-transform: capitalize;
+}
+
+.team .title
+{
+    color: grey;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+}
+
+@media (max-width:2000px) and (min-width:1800px)
+{
+    
+section
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    /* width: 900px;
+    margin: auto; */
+   
+}
+
+.team
+{
+    width: 305px;
+    height: 370px;
+    overflow: hidden;
+    /* margin: 8px; */
+    border: 2px solid var(--primary);
+    border-radius: 16px;
+    position: relative;
+    background-color: #615a5a;
+    /* overflow: hidden; */
+
+}
+
+
+.team::before
+{
+    content: '';
+    background-image: var(--img);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    filter: blur(4px) ;
+
+
+
+}
+
+.team img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 305px;
+    height: 370px;
+    border-radius: 16px;
+    z-index: 3;
+    object-fit: cover;
+    border: none;
+}
+
+.team:hover img
+{
+    width: 180px;
+    height: 250px;
+    border: 2px solid var(--primary);
+    left: 65px;
+    top: 10px;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.team .info
+{
+    background-color: aliceblue;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: #000000;
+    padding: 10px;
+    border-top:18px solid var(--primary);
+    border-radius: 50% 50% 0px 0px ;
+    padding-top: 70px;
+    text-align: center;
+    transform: scale(1)
+
+    
+}
+
+.team .name
+{
+    font-size: 25px;
+    font-weight: 600;
+    
+    text-transform: capitalize;
+}
+
+.team .title
+{
+    color: grey;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.head
+{
+    font-size: 30px;
+}
+
+
+}
+
+
+#navbar
+{
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.pagehead
+{
+    color: whitesmoke;
+    font-weight: 700;
+    margin-left: 38.8%;
+    font-size: 25px;
+}
+
+
+/* =========================NAVBAR MEDIA QUERIES============== */
+
+
+@media (max-width:2000px) and (min-width:1700px)
+{
+
+    #navbar
+{
+    height: 80px;
+}
+.cretronix__logo
+{
+    width: 78px;
+}
+.credenzlogo
+{
+    width: 150px;
+}
+#nav-link
+{
+    font-size: 30px;
+}
+footer
+{
+    font-size: 1.42rem;
+}
+.pagehead
+{
+    font-size: 30px;
+}
+}
+
+@media (max-width:1700px) and (min-width:1500px)
+{
+
+    #navbar
+{
+    height: 70px;
+    padding: 0;
+}
+.cretronix__logo
+{
+    width: 65px;
+}
+.credenzlogo
+{
+    width: 140px;
+}
+#nav-link
+{
+    font-size: 25px;
+}
+footer
+{
+    font-size: 1.22rem;
+}
+}
+@media (max-width:1500px) and (min-width:1300px)
+{
+    #navbar
+{
+    height: 70px;
+}
+.cretronix__logo
+{
+    width: 60px;
+}
+.credenzlogo
+{
+    width: 120px;
+    height: 40px;
+   
+}
+#nav-link
+{
+    font-size: 25px;
+}
+footer
+{
+    font-size: 1.42rem;
+}
+}
+
+
+
+
+  
+@media only screen and (max-width: 1200px) and (min-width: 990px)
+{
+    .credenzlogo
+    {
+      
+        width: 95px;
+        height: 34px;
+        display: block;
+        justify-content: center;
+    }
+    .cretronix__logo
+    {
+        width: 50px;
+    }
+}
+
+@media only screen and (max-width: 990px) and (min-width: 320px)
+{
+    .pagehead
+    {
+        margin-left: 6%;
+    }
+}
+
+@media only screen and (max-width: 990px) and (min-width: 280px)
+{
+    .credenzlogo
+    {
+        visibility: hidden;
+    }
+}
+
+
+  @media only screen and (max-width: 420px) and (min-width: 320px) {
+
+
+    footer
+    {
+        font-size: .8rem;
+    }
+  }
+  
+
+
+
+
