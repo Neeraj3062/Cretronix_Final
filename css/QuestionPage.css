@@ -195,11 +195,11 @@ footer {
   font-weight: 600;
   font-size: 20px;
   font-family: "Bebas Neue", sans-serif;
-  background: linear-gradient(45deg, transparent 5%, #259104 5%);
+  background: linear-gradient( transparent 0%, #259104 5%);
   border: 0;
   color: #fff;
   letter-spacing: 3px;
-  box-shadow: 6px 0px 0px #00e6f6;
+  /* box-shadow: 6px 0px 0px #00e6f6; */
   outline: transparent;
   position: relative;
 }
@@ -210,36 +210,19 @@ footer {
 }
 
 .buttons #clear {
-  background: linear-gradient(45deg, transparent 5%, #3a3939 5%);
-  box-shadow: 6px 0px 0px #b6b6b6;
+  background: linear-gradient(transparent 5%, #3a3939 5%);
+  /* box-shadow: 6px 0px 0px #b6b6b6; */
 }
 
-.buttons #clear:after {
-  background: linear-gradient(
-    45deg,
-    transparent 3%,
-    #b6b6b6 3%,
-    #b6b6b6 5%,
-    #3a3939 5%
-  );
-  text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #b6b6b6;
-}
+
 
 .buttons #previous {
-  background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
-  box-shadow: 6px 0px 0px #00e6f6;
+  background: linear-gradient( transparent 5%, #ff013c 5%);
+  /* box-shadow: 6px 0px 0px #00e6f6; */
 }
 
-.buttons #previous:after {
-  background: linear-gradient(
-    45deg,
-    transparent 3%,
-    #00e6f6 3%,
-    #00e6f6 5%,
-    #ff013c 5%
-  );
-  text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
-}
+
+ 
 
 /* ==========CALCULATOR============ */
 
@@ -1354,6 +1337,52 @@ body {
 {
   #sideBar {
     width: 400px;
+  }
+  #timer {
+    color: #f6f4f3;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Lato", sans-serif;
+    font-size: 0.6em;
+    letter-spacing: 3px;
+  }
+  
+  .days,
+  .hours,
+  .minutes,
+  .seconds {
+    display: inline-block;
+    padding-bottom: 10px;
+    height: 40px;
+    width: 50px;
+    border-radius: 5px;
+  }
+  
+
+  .instruct {
+    font-size: 14px;
+    font-weight: 800;
+    margin-top: 15px;
+    /* margin-right: 25px; */
+    padding: 0;
+  }
+  #ans {
+    background-color: green;
+    /* position: relative; */
+  }
+  .b_info
+  {
+    position: relative;
+    left: -30px;
+  }
+  #not-ans {
+    background-color: brown;
+  }
+  #bookmark {
+    background-color: rgb(57, 3, 143);
+  }
+  #view-not-ans {
+    background-color: red;
   }
   .Q_Circles {
 
